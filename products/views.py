@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.views import View
+from products.models import Product
 
 # Create your views here.
 class Products(View):
     def get(self, request):
-        products = [] #TODO: Haz la query para traer productos
+        products = Product.objects.all()
         context = {'products': products}
         return render(request, 'products.html', context)

@@ -8,5 +8,10 @@
 </head>
 <body>
     <h1>Productos legales</h1>
+    <ul>
+        {% for p in products %}
+            <li>{{ p }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
