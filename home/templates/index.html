@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Django</title>
-</head>
-<body>
-    <h1>Bienvenido a mi E-Commerce con Django</h1>
-    <h3>Productos</h3>
-    <ul>
-        {% for p in products %}
-            <li>{{ p }}</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+E-COMMERCE
+{% endblock %}
+
+{% block content %}
+<h1>Bienvenido a E-COMMERCE</h1>
+
+<ul>
+    {% for p in products %}
+    <li>{{ p }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
