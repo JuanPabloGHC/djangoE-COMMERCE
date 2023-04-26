@@ -16,6 +16,7 @@ E-COMMERCE Products
             <td>STOCK</td>
             <td>DESCRIPTION</td>
             <td>BRAND</td>
+            <td></td>
         </tr>
         {% for p in products %}
         <tr>
@@ -25,6 +26,20 @@ E-COMMERCE Products
             <td>{{p.stock}}</td>
             <td>{{p.description}}</td>
             <td>{{p.brand}}</td>
+            <td>
+                <div class="d-flex gap-1">
+                    <div>
+                        <a class="btn btn-warning">
+                            <i class="bi bi-brush d-flex align-items-center" style="font-size: 1.5em;"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="btn btn-danger">
+                            <i class="bi bi-clipboard-x"></i>
+                        </a>
+                    </div>
+                </div>
+            </td>
         </tr>
         {% endfor %}
     </table>
