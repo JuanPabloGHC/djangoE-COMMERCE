@@ -10,7 +10,7 @@ E-COMMERCE Products
 
     <table class="table mt-3 table-striped">
         <tr>
-            <td>ID</td>
+            <!-- <td>ID</td> -->
             <td>NAME</td>
             <td>PRICE</td>
             <td>STOCK</td>
@@ -20,7 +20,7 @@ E-COMMERCE Products
         </tr>
         {% for p in products %}
         <tr>
-            <td>{{p.id}}</td>
+            <!-- <td>{{p.id}}</td> -->
             <td>{{p.name}}</td>
             <td>{{p.price}}</td>
             <td>{{p.stock}}</td>
@@ -29,12 +29,12 @@ E-COMMERCE Products
             <td>
                 <div class="d-flex gap-1">
                     <div>
-                        <a class="btn btn-warning">
+                        <a href="{% url 'update_product' p.id %}" class="btn btn-warning">
                             <i class="bi bi-brush d-flex align-items-center" style="font-size: 1.5em;"></i>
                         </a>
                     </div>
                     <div>
-                        <a class="btn btn-danger">
+                        <a href="{% url 'delete_product' p.id %}" class="btn btn-danger">
                             <i class="bi bi-clipboard-x"></i>
                         </a>
                     </div>

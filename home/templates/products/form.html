@@ -10,8 +10,16 @@ E-COMMERCE Create_Product
 
 <form action="" method="post">
     {% csrf_token %}
-    {{form}}
-    <button class="btn btn-primary " type="submit">GUARDAR</button>
+    <div class="form-group row col-md-6">
+        {{form}}
+        <div class="text-center">
+            <button class="btn btn-primary mt-3" type="submit">GUARDAR</button>
+            <!-- <a href="{% url 'product' %}">
+                <button class="btn btn-primary mt-3">CANCELAR</button>
+            </a> -->
+        </div>
+    </div>
+
 </form>
 
 {% endblock %}
